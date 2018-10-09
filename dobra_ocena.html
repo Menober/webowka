@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Strona umożliwia pozytywne zaliczenie kursu programowania systemów webowych.">
+		<meta name="keywords" content="systemy, webowe, html, css, hemoglobina, taka, sytuacja">
+		<meta name="author" content="Krzysztof Miarczyński">
+		<link rel="icon" type="image/x-icon" href="icon.ico">
+		<title>Wygrana!</title>
+		
+		<style>
+		table, th, td {
+			border: 2px solid white;
+		}
+		</style>
+	</head>
+	<body style="background-color:#303131;color:white;font-size:20px">
+	
+		<header>
+		
+		</header>
+		<section>
+			<h2 style="text-align:center; color:gold">Wygrałeś!</h2>  
+			W ramach nagrody otrzymujesz darmowego pączka.<br>
+			Wypełnij formularz adresowy:<br>
+			<form>
+				Imię:<br>
+				<input type="text" name="imie"><br>
+				Nazwisko:<br>
+				<input type="text" name="nazwisko"><br>
+				Adres:<br>
+				<input type="text" name="adres"><br>
+				<fieldset>
+					<legend>Rodzaj nadzienia:</legend>
+						<select>
+							<option value="beznadziejny">Beznadziejny</option>
+							<optgroup label="Czekoladowe nadzienie">
+								<option value="bialaCzek">Biała czekolada</option>
+								<option value="czarnaCzek">Afroamerykańska czekolada</option>
+                            </optgroup>
+                            <optgroup label="Owocowe nadzienie">
+								<option value="powidla">Powidła śliwkowe</option>
+                                <option value="marmolada">Marmolada</option>
+                            </optgroup>
+                            <optgroup label="OSTROŻNIE!">
+                                <option value="olej">Olej palmowy</option>
+                            </optgroup>
+                        </select>
+                </fieldset>
+				<fieldset class="radiobuttons">
+					<legend>Ilość cukru pudru:</legend>
+						<input type="radio" value="wcale" checked>
+						<label>Wcale</label>
+						<input type="radio" value="standardowo">
+						<label>Standardowo</label>
+						<input type="radio" value="duzo">
+						<label>Duużo</label>
+				</fieldset>
+				<fieldset class="checkboxes">
+					<legend>Dodatkowe opcje:</legend>
+							<input type="checkbox" value="lukrowane_imie">
+							<label>Lukrowane imie</label><br>
+							<input type="checkbox" value="lukrowane_nazwisko">
+							<label>Lukrowane nazwisko</label>
+                </fieldset>
+				<textarea placeholder="Wiadomość dla sprzedawcy" maxlength="200"></textarea><br>
+				<input type="reset" value="Wyczyść">
+                <input type="submit" value="Wyślij">
+			</form>
+		</section>
+		
+	</body>
+</html>
