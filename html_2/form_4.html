@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Strona umożliwia pozytywne zaliczenie kursu programowania systemów webowych.">
+		<meta name="keywords" content="systemy, webowe, html, css, hemoglobina, taka, sytuacja">
+		<meta name="author" content="Krzysztof Miarczyński Jakub Majchrzak">
+		<link rel="icon" type="image/x-icon" href="icon.ico">
+		<title>Memoland</title>
+		<style>
+		a {
+			color:blue;
+		}
+		</style>
+	</head>
+	<body style="background-color:lightgray">
+		<header id="start">
+			 <img src="pomarancza.jpg" alt="Pomarańcza" title="Poczęstuj się" />
+		</header>
+		<nav>
+			MENU:
+			<a href="../index.html">Strona główna</a>|
+			<a href="../zla_ocena.html">Zła ocena</a>|
+			<a href="../dobra_ocena.html">Dobra ocena</a>|
+			<a href="index.html">HTML_2 - Index</a>|
+			<a href="form_3.html">HTML_2 - Punkt 3</a>|
+			<a href="form_4.html">HTML_2 - Punkt 4</a>|
+		</nav>
+		<h2>Dodatkowe informacje o użytkowniku</h2>
+		<form method = "post">
+			<p>
+				<label>Kolor:
+					<input type = "color" >
+						Ulubiony kolor
+				</label>
+			</p>
+			<p>
+				<label>Miesiac:
+					<input type = "month"/> (yyyy-mm)
+						Miesiac i rok twoich urodzin
+				</label>
+			</p>
+			<p>
+				<label>Range:
+					0 <input type = "range"
+						min = "0"
+						max = "10"
+						value = "5" /> 10 
+						Jak bardzo lubisz HTML5?
+				</label>
+			</p>
+			<p>
+				<label>Search:
+					<input type = "search" placeholder = "wpisz czego szukasz" />
+				</label> (Wprowadź twoje szukanie tutaj)
+			</p>
+			<p>
+				<label>URL:
+					<input type = "url" placeholder = "http://www.domainname.com"/>
+				</label> (Daj adres URL)
+			</p>
+			<p>
+				<input type = "submit" value = "Wyślij" />
+				<input type = "reset" value = "Reset" />
+			</p>
+		</form>
+	</body>
+</html>

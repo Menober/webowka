@@ -27,56 +27,73 @@
 			<a href="index.html">HTML_2 - Index</a>|
 			<a href="form_3.html">HTML_2 - Punkt 3</a>|
 			<a href="form_4.html">HTML_2 - Punkt 4</a>|
-			
 			</nav>
-		</section><br>
-		<section>
-		Sekcja zewnętrzna
-			<section>
-				Sekcja wewnętrzna
-				<article>
-					Artykuł wewnętrzny
-				</article>
-			</section>
-			<aside>
-				Wstawka
-			</aside>
 		</section>
-		
-		<br><br>
-		Ściągawka:<br>
-		<img src="elementy_semantyczne.gif" alt="Ściągawka"><br>
-		
-		<article>
-			<section>
-				<h2>Meter</h2>
-				Metery dla różnych wartości:
-				<div>
-				<div style="font-style:italic">&emsp;Parametry: min="0" max="100" low="25" high="75" optimum="50"</div>
-				&emsp;10/100 <meter min="0" max="100" low="25" high="75" optimum="50" value="10"></meter><br>
-				&emsp;30/100 <meter min="0" max="100" low="25" high="75" optimum="50" value="30"></meter><br>
-				&emsp;50/100 <meter min="0" max="100" low="25" high="75" optimum="50" value="50"></meter><br>
-				&emsp;70/100 <meter min="0" max="100" low="25" high="75" optimum="50" value="70"></meter><br>
-				&emsp;90/100 <meter min="0" max="100" low="25" high="75" optimum="50" value="90"></meter><br>
-				</div><br>
-				Gdy, na przykład, chcemy zrobić ankietę mającą 10 podstron, możemy na każdej z nich umieścić takiego metera z kolejnymi numerami strony jako value.<br>
-			</section>
-			<section>
-				<h2>Mark</h2>
-				<div style="width:50%"><mark>Lorem</mark> <mark>ipsum</mark> dolor sit amet, consectetur adipiscing elit. Morbi nec elit lacus. Ut nec mollis tortor. Sed luctus augue eget purus imperdiet auctor. Morbi quis auctor augue. Suspendisse commodo ligula in tortor vehicula, eget fringilla metus dapibus. Vestibulum vehicula sapien ac suscipit gravida. Nullam ut lectus <mark>lorem</mark>. Aliquam elementum vulputate arcu, pretium maximus leo dignissim et. Phasellus turpis justo, gravida non tortor vehicula, fringilla venenatis <mark>ipsum</mark>. Suspendisse at velit sapien. Sed scelerisque mi ut augue suscipit egestas. Sed eleifend, metus ut pellentesque molestie, lacus odio interdum nisl, in laoreet tortor purus pulvinar <mark>lorem</mark>. Mauris augue velit, sodales quis scelerisque vitae, ultricies faucibus velit. Nam a metus at elit accumsan aliquam.</div>
-			</section>
-			<section>
-				<h2>Details&Summary</h2>
-				<details>
-				  <summary>Copyright 2018-2077.</summary>
-				  <p> - by Students Company. All Rights Not Reserved</p>
-				  <p>All content and graphics on this web site are the property of the Students Company.</p>
-				</details>
-			</section>
-			<section>
-				
-			</section>
-		</article>
+		<br>
+		<form autocomplete="on">
+        <label>
+            <span>Imię</span>
+            <input type="text" name="firstname" pattern="[A-Za-z]+" autofocus>
+            <span class="format-info">Tylko małe i duże litery</span>
+        </label><br/>
+        <label>
+            <span>Nazwisko</span>
+            <input type="text" name="lastname" pattern="[A-Za-z\-]+" required>
+            <span class="format-info">Małe, duże litery i "-"</span>
+        </label><br/>
+        <label>
+            <span>Data dzisiejsza</span>
+            <input type="date" name="todaysdate">
+            <span class="format-info">Data z kalendarza</span>
+        </label><br>
+        <label>
+            <span>Miesiąc urodzin</span>
+            <input list="month">
+            <datalist id="month">
+                <option value="Styczeń"></option>
+                <option value="Luty"></option>
+                <option value="Marzec"></option>
+                <option value="Kwiecień"></option>
+                <option value="Maj"></option>
+                <option value="Czerwiec"></option>
+                <option value="Lipiec"></option>
+                <option value="Sierpień"></option>
+                <option value="Wrzesień"></option>
+                <option value="Październik"></option>
+                <option value="Listopad"></option>
+                <option value="Grudzień"></option>
+            </datalist>
+            <span class="format-info">Miesiąc wybrany z listy</span>
+        </label><br/>
+        <label>
+            <span>Adres mailowy</span>
+            <input type="email" name="email" required>
+            <span class="format-info">nazwa@domena.com</span>
+        </label><br>
+        <label>
+            <span>Numer telefonu</span>
+            <input type="tel" name="phone" pattern="[0-9]{9}">
+            <span class="format-info">9 cyfr</span>
+        </label>
+        <fieldset>
+            <legend>Twoja płeć</legend>
+            <label>
+                <input type="radio" name="gender" value="male" checked>
+                Mężczyzna
+            </label>
+            <label>
+                <input type="radio" name="gender" value="female">
+                Kobieta
+            </label>
+            <label>
+                <input type="radio" name="gender" value="other">
+                Inne
+            </label><br/>
+        </fieldset>
+        <input class="button" type="submit" value="Submit"
+               formaction="personal_info.html">
+        <input class="reset button" type="reset" value="Wyczyść formularz"/>
+    </form>
 		<footer>
 			<code>
 			<br>╔────────────────────────────────────────────────────────────────────────────────╗
