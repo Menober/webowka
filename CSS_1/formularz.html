@@ -13,23 +13,71 @@
 	
 	
 	
-		<footer>
-			<code>
-			<br>╔────────────────────────────────────────────────────────────────────────────────╗
-			<br>║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░║
-			<br>║░▓░░░▓░▓▓▓▓▓▓▓▓▓░▓▓▓░░░░░░░▓▓▓░▓░░░░░░█░░░░░░▓▓▓▓▓▓░░▓░░░░░░░▓░▓▓▓▓▓▓░░▓▓▓▓▓▓░░░║
-			<br>║░▓░░░▓░░░░░▓░░░░░▓░░▓░░░░░▓░░▓░▓░░░░░░█░░░░░░▓░░░░░░░▓░░░░░░░▓░▓░░░░░░░▓░░░░░▓░░║
-			<br>║░▓░░░▓░░░░░▓░░░░░▓░░░▓░░░▓░░░▓░▓░░░░░░█░░░░░░▓░░░░░░░░▓░░░░░▓░░▓░░░░░░░▓░░░░░░▓░║
-			<br>║░▓░░░▓░░░░░▓░░░░░▓░░░░▓░▓░░░░▓░▓░░░░░░█░░░░█░▓░░░░░░░░▓░░░░░▓░░▓░░░░░░░▓░░░░░▓░░║
-			<br>║░▓▓▓▓▓░░░░░▓░░░░░▓░░░░░▓░░░░░▓░▓░░░░░░█░░░░█░▓▓▓▓░░░░░▓░░░░▓░░░▓▓▓▓▓░░░▓▓▓▓▓▓░░░║
-			<br>║░▓░░░▓░░░░░▓░░░░░▓░░░░░░░░░░░▓░▓░░░░░░██████░▓░░░░░░░░░▓░░░▓░░░▓░░░░░░░▓░░░░░▓░░║
-			<br>║░▓░░░▓░░░░░▓░░░░░▓░░░░░░░░░░░▓░▓░░░░░░░░░░░█░▓░░░░░░░░░░▓░▓░░░░▓░░░░░░░▓░░░░░░▓░║
-			<br>║░▓░░░▓░░░░░▓░░░░░▓░░░░░░░░░░░▓░▓░░░░░░░░░░░█░▓░░░░░░░░░░▓░▓░░░░▓░░░░░░░▓░░░░░░▓░║
-			<br>║░▓░░░▓░░░░░▓░░░░░▓░░░░░░░░░░░▓░▓▓▓▓▓▓░░░░░░█░▓▓▓▓▓▓░░░░░▓░░░░░░▓▓▓▓▓▓░░▓░░░░░░▓░║
-			<br>║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░║
-				<br>╟────────────────────────────────────────────────────────────────────────────────╢</code><br>
-			Znaki specjalne? Chodzi o te (p#$!%^#@*e) znaki na klawiaturze po lewej stronie od nawiasów?<br>
-			Copyleft © 2077 by <a href="mailto:krzysztof.miarczynski@gmail.com">Krzysztof Miarczyński</a> <a href="mailto:jakub.majchrzak@gmail.com">Jakub Majchrzak</a>
-		</footer>
+		<form autocomplete="on">
+			<label>
+				<span>Imię</span>
+				<input type="text" name="firstname" pattern="[A-Za-z]+" autofocus>
+				<span class="format-info">Tylko małe i duże litery</span>
+			</label><br/>
+			<label>
+				<span>Nazwisko</span>
+				<input type="text" name="lastname" pattern="[A-Za-z\-]+" required>
+				<span class="format-info">Małe, duże litery i "-"</span>
+			</label><br/>
+			<label>
+				<span>Data dzisiejsza</span>
+				<input type="date" name="todaysdate">
+				<span class="format-info">Data z kalendarza</span>
+			</label><br>
+			<label>
+				<span>Miesiąc urodzin</span>
+				<input list="month">
+				<datalist id="month">
+					<option value="Styczeń"></option>
+					<option value="Luty"></option>
+					<option value="Marzec"></option>
+					<option value="Kwiecień"></option>
+					<option value="Maj"></option>
+					<option value="Czerwiec"></option>
+					<option value="Lipiec"></option>
+					<option value="Sierpień"></option>
+					<option value="Wrzesień"></option>
+					<option value="Październik"></option>
+					<option value="Listopad"></option>
+					<option value="Grudzień"></option>
+				</datalist>
+				<span class="format-info">Miesiąc wybrany z listy</span>
+			</label><br/>
+			<label>
+				<span>Adres mailowy</span>
+				<input type="email" name="email" required>
+				<span class="format-info">nazwa@domena.com</span>
+			</label><br>
+			<fieldset>
+				<span>Numer telefonu</span><br>
+				<span>Atualnie nie można podać telefonu</span>
+				<input type="tel" name="phone" pattern="[0-9]{9}" disabled>
+				<span class="format-info">9 cyfr</span>
+			</fieldset>
+			<fieldset>
+				<legend>Twoja płeć</legend>
+				<label>
+					<input type="radio" name="gender" value="male" checked>
+					Mężczyzna
+				</label>
+				<label>
+					<input type="radio" name="gender" value="female">
+					Kobieta
+				</label>
+				<label>
+					<input type="radio" name="gender" value="other">
+					Inne
+				</label><br/>
+			</fieldset>
+			<input class="button" type="submit" value="Submit"
+				formaction="personal_info.html">
+			<input class="reset button" type="reset" value="Wyczyść formularz"/>
+		</form>
+
 	</body>
 </html>

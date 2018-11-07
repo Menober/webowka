@@ -1,0 +1,12 @@
+input[type="radio"]:checked {
+	box-shadow: 0 0 0 3px orange;
+}
+input[type="text"]:disabled {
+	background: gray;
+}
+input[type="text"]:enabled {
+	background: blue;
+}
+input:required {
+	border: 1px dashed red;
+}

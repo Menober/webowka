@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="@media rule.">
+		<meta name="keywords" content="css,font,media,zobacz, strona zawierająca formularz, systemy, webowe">
+		<meta name="author" content="Krzysztof Miarczyński, Jakub Majchrzak">
+		<link rel="icon" type="image/x-icon" href="icon.ico">
+		<title>Pseudoklasy</title>
+		<link rel="stylesheet" href="12_pseudoklasy.css">
+	</head>
+	<body>
+	<p>:first - first child of body</p>
+	<a href="kotek.html">:active:hover:link</a><br><hr>
+	:checked<br>
+	<form action="">
+	  <input type="radio" checked="checked" value="male" name="gender"> Male<br>
+	  <input type="radio" value="female" name="gender"> Female<br>
+	  <input type="checkbox" checked="checked" value="Bike"> I have a bike<br>
+	  <input type="checkbox" value="Car"> I have a car 
+	</form>
+	<hr>
+	:disabled/:enabled/:focus/<br>
+	<form action="">
+		First name: <input type="text" value="Mickey"><br>
+		Last name: <input type="text" value="Mouse"><br>
+		Country: <input type="text" value="Disneyland" disabled><br>
+		Password: <input type="password" name="password" value="psw" disabled><br>
+		E-mail: <input type="email" value="john@doe.com" name="usremail" required>
+	</form>
+	<hr>
+	:empty<br>
+	<p></p>
+	<p>NotEmpty</p>
+	<p>Ostatni znacznik p</p>
+	<span>last-child: jeżeli ostatnim znacznikiem będzie p, to przyjmie on kolor czerwony</span>
+	
+	<hr>
+	Targer:<br>
+	<p><a href="#news1">Skocz do pierwszego</a></p>
+	<p><a href="#news2">Skocz do drugiego</a></p>
+	<p id="news1"><b>Pierwsza opcja</b></p>
+	<p id="news2"><b>Druga opcja</b></p>
+	
+	
+	<hr>
+	<br>
+	<p></p>
+	</body>
+</html>

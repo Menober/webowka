@@ -1,0 +1,49 @@
+body{
+	background-color:lightgrey;
+}
+a:link {
+    background-color: lightgreen;
+}
+a:active {
+    background-color: yellow;
+}
+a:hover{
+	font-weight:bold;
+}
+a:visited { 
+    color: green;
+}
+input:checked {
+    height: 50px;
+    width: 50px;
+}
+input:enabled {
+    background: lightyellow;
+}
+
+input:disabled {
+    background: #dddddd;
+}
+input:focus {
+    background-color: yellow;
+}
+input:required { 
+    background-color: black;
+	color:white;
+}
+p:empty {
+    width: 100px;
+    height: 20px;
+    background: #ff0000;
+}
+p:first-child {
+    background-color: yellow;
+}
+p:last-child {
+    background: #ff0000;
+}
+
+:target {
+    border: 2px solid #D4D4D4;
+    background-color: #e5eecc;
+}
