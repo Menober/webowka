@@ -1,0 +1,31 @@
+p#pierwszy{
+	font-weight: bold;
+	font-style: normal;
+	font-variant: small-caps;
+}
+
+p#drugi{
+	font-weight: normal;
+	font-style: italic;
+}
+
+p#trzeci{
+	font-weight: 900;
+	font-style: oblique;
+	line-height: 1.6;
+	
+}
+
+p#czwarty{
+	font-weight: bolder;
+	font-size: large;
+	line-height: 80%;
+	font-family: "Times New Roman", Times, serif;
+}
+
+p#piaty{
+	font-weight: 100;
+	font-size: 150%;
+	line-height: 200%;
+	font-family: Arial, Helvetica, sans-serif;
+}

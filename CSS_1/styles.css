@@ -1,0 +1,143 @@
+#plik_z_css{
+	margin: 2px;
+	color:yellow;} 
+.thanos{
+	text-align:center;
+	color:purple;
+	font-size:50pt;
+}
+
+#stark{
+	color:gold;
+	font-size:20pt;
+	text-shadow: 1px 1px 1px red;
+}
+
+span.hulk{
+	color:green;
+	font-size:80pt;
+	text-shadow: -3px -3px 0px black, 3px 3px 0px black;	
+}
+
+div.ostateczne_rozwiazanie_kwestii_box_modelowej{
+    width: 300px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
+}
+p.margin {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+	border: 1px solid black;
+	height:50px;
+}
+p.padding {
+	padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+	border: 1px solid black;
+	width:200px;
+}
+div.relative {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid #F9E26F;
+	
+} 
+
+div.absolute {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73AD21;
+	
+}
+div.static {
+    position: static;
+    border: 3px solid #6F8BF9;
+	clear:both;
+}
+div.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    border: 3px solid #6FF978;
+}
+img.clear {
+    float: left;
+}
+p.a3_1{
+	font-size:2em;
+}
+p.a3_2{
+	font-size:20px
+}
+p.a3_3{
+	font-size:20pt
+}
+p.a3_4{
+	font-size:150%
+}
+img.a6_1{
+	width:500pt;
+	height:250pt;
+}
+img.a6_2{
+	float:left;width:100px;height:100px;
+}
+span.a7_1{
+	
+	border-color: coral;
+	border-width: thick;
+	border-style: dotted;
+}
+
+p.clear {
+    clear: both;
+	border: 1px solid black;
+}
+
+.text-content {
+  position: relative;
+  overflow: hidden;
+  height: 140px;
+  width: 100%;
+  text-align: left;
+  font-size: 100px;
+}
+
+.text-content::after {
+  position: absolute;
+  content: attr(data-text);
+  left: 0;
+  top: 0;
+  text-shadow: 5px 5px 1px #000;
+  z-index: -1;
+}
+
+/* =========================== */
+
+.text-content {
+  color: #f0f0f0;
+}
+
+@supports(-webkit-background-clip:text) {
+.text-content {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  background-image: -moz-linear-gradient(top,  #c63e54 0%, #eea53e 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c63e54), color-stop(100%,#eea53e));
+  background-image: -webkit-linear-gradient(top,  #c63e54 0%,#eea53e 100%);
+  background-image: -o-linear-gradient(top,  #c63e54 0%,#eea53e 100%);
+  background-image: -ms-linear-gradient(top,  #c63e54 0%,#eea53e 100%);
+  background-image: linear-gradient(to bottom,  #c63e54 0%,#eea53e 100%);
+}
+}

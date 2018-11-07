@@ -1,0 +1,26 @@
+body {
+  background-color: tan;
+}
+@media screen and (max-width: 992px) {
+  body {
+    background-color: lightblue;
+  }
+  div.example {
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-color: lightyellow;
+  }
+   div.example {
+    font-size: 40px;
+  }
+}
+
+@media screen and (orientation: landscape) {
+    body {
+        background-color: lightred;
+    }
+}
