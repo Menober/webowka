@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Strona umożliwia pozytywne zaliczenie kursu programowania systemów webowych.">
+		<meta name="keywords" content="systemy, webowe, html, css, hemoglobina, taka, sytuacja">
+		<meta name="author" content="Krzysztof Miarczyński, Jakub Majchrzak">
+		<link rel="icon" type="image/x-icon" href="icon.ico">
+		<title>Memoland</title>
+		<link rel="stylesheet" href="styles.css">
+		<style type="text/css">
+		body {
+			font-size:20px;
+		}
+		span{
+			font-size:30px;
+		}
+		#p1 {background-color:rgba(255,0,0,0.3);}
+		#p2 {background-color:rgba(0,255,0,0.3);}
+		#p3 {background-color:rgba(0,0,255,0.3);}
+		#p4 {background-color:rgba(192,192,192,0.3);}
+		#p5 {background-color:rgba(255,255,0,0.3);}
+		#p6 {background-color:rgba(255,0,255,0.3);}
+		#p11 {background-color:hsla(120,100%,50%,0.5);}
+		#p22 {background-color:hsla(120,100%,75%,0.3);}
+		#p33 {background-color:hsla(120,100%,25%,0.1);}
+		#p44 {background-color:hsla(120,60%,70%,0.3);}
+		#p55 {background-color:hsla(290,100%,50%,0.9);}
+		#p66 {background-color:hsla(290,60%,70%,0.3);}
+		.hero-image {
+		  background-image: url("gif.gif");
+		  height:auto;
+		 
+		  background-position: center;
+		  background-repeat: repeat;
+		  position: relative;
+		}
+		#grad1 {
+		height: 200px;
+		background-color: red;
+		background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
+		}
+		#grad2 {
+		height: 1200px;
+	
+		background-color: red; /* For browsers that do not support gradients */
+		background-image: repeating-radial-gradient(black , white 10%, black 10%); /* Standard syntax (must be last) */
+		}
+		</style>
+	</head>
+	<body style="background-color:lightgray">
+		<article>
+			<h2>1. Text-shadow.</h2>
+			<span style="font-weight:bold;text-shadow: 1px 1px 0px #ff0000">To jest tekst z czerwonym cieniem.</span>
+			<span style="font-weight:bold;text-shadow: 0 0 3px gold;">Tekst ze złotą poświatą.</span>
+		</article>
+		<hr>
+		<article>
+			<h2>2. Border-radius</h2>
+			<div style="border:2px solid green; border-radius:15px; text-align:center;">border-radius:15px - wartość dla wszystkich rogów</div>
+			<div style="border:2px solid red; border-radius:15px 50px;text-align:center;">border-radius:15px 50px - pierwsza wartość jest dla lewego-górnego i prawego-dolnego rogu, druga dla prawego-górnego i lewego-dolnego rogu</div>
+			<div style="border:2px solid white; border-radius:15px 50px 30px;text-align:center;">border-radius: 15px 50px 30px - pierwsza wartość dla górnego-lewego rogu, druga dla górnego-prawego, trzecia dla lewego dolnego</div>
+			<div style="border:2px solid blue; border-radius: 15px 50px 30px 5px;;text-align:center;">border-radius: 15px 50px 30px 5px - od lewej: lewy-górny, prawy-górny, prawy-dolny, lewy-dolny</div>
+		</article>
+		<hr>
+		<article class="hero-image">
+			<h2 style="background-color:lightgray;">3. RGBA oraz HSLA</h2>
+			<span style="background-color:white;border:2px solid black;font-size:20px;font-weight:bold;">RGBA:</span>
+			<p id="p1">Red</p>
+			<p id="p2">Green</p>
+			<p id="p3">Blue</p>
+			<p id="p4">Grey</p>
+			<p id="p5">Yellow</p>
+			<p id="p6">Cerise</p>
+			<hr style="border:15px dotted red">
+			<span style="background-color:white;border:2px solid black;font-size:20px;font-weight:bold;">HSLA:</span>
+			<p id="p11">Green</p>
+			<p id="p22">Light green</p>
+			<p id="p33">Dark green not visible</p>
+			<p id="p44">Pastel green</p>
+			<p id="p55">Violet</p>
+			<p id="p66">Pastel violet</p>
+		</article>
+		<hr>
+		<article>
+		<h2>4. Box-shadow</h2>
+		<div style="border: 1px solid; padding: 10px; box-shadow: 5px 10px yellow;">
+			<p>Div z box-shadow. Pierwsza wartość, to poziomy offset, 
+			a druga wartość, to pionowy offset. 
+			Kolor cienia zostanie odziedziczony po kolorze (jeżeli nie jest ustawiony).</p>
+		</div><br>
+		</article>
+		<hr>
+		<article>
+		<h2>5. Gradienty liniowe i radialne</h2>
+		<div id="grad1"></div>
+		<div id="grad2"></div>
+		</article>
+		<hr>
+		<article>
+		<h2>6.</h2>
+		</article>
+	</body>
+</html>
