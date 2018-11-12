@@ -36,35 +36,127 @@
 		  position: relative;
 		}
 		#grad1 {
-		height: 200px;
-		background-color: red;
-		background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
+			height: 200px;
+			background-color: red;
+			background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
 		}
 		#grad2 {
-		height: 1200px;
-	
-		background-color: red; /* For browsers that do not support gradients */
-		background-image: repeating-radial-gradient(black , white 10%, black 10%); /* Standard syntax (must be last) */
+			height: 1200px;
+			background-color: red; /* For browsers that do not support gradients */
+			background-image: repeating-radial-gradient(black , white 10%, black 10%); /* Standard syntax (must be last) */
 		}
 		#borderimg1 { 
-		text-align:center;
-		border: 20px solid transparent;
-		padding: 15px;
-		border-image: url(border.png) 30 round;
+			text-align:center;
+			border: 20px solid transparent;
+			padding: 15px;
+			border-image: url(border.png) 30 round;
 		}
 		#borderimg2 { 
-		text-align:center;
-		border: 20px solid transparent;
-		padding: 15px;
-		border-image: url(border.png) 30 stretch;
+			text-align:center;
+			border: 20px solid transparent;
+			padding: 15px;
+			border-image: url(border.png) 30 stretch;
 		}	
 		#borderimg3 { 
-		text-align:center;
-		border: 20px solid transparent;
-		padding: 15px;
-		border-image: url(border.png) 30 round;
-		border-image-slice: 10%;
+			text-align:center;
+			border: 20px solid transparent;
+			padding: 15px;
+			border-image: url(border.png) 30 round;
+			border-image-slice: 10%;
 		}	
+		div#animacja {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: relative;
+			animation-name: animacja;
+			animation-timing-function: ease-in-out ;
+			animation-duration: 1.2s ;
+			animation-direction: reverse;
+			animation-iteration-count: infinite;
+		}
+		@keyframes animacja {
+			0%   {background-color:red; left:0px; top:0px;}
+			25%  {background-color:green; left:100px; top:0px;}
+			50%  {background-color:yellow; left:100px; top:100px;}
+			75%  {background-color:blue; left:0px; top:100px;}
+			100% {background-color:red; left:0px; top:0px;}
+		}
+		#transition {
+			width: 100px;
+			height: 100px;			
+			transition: width 2s, height 2s, transform 2110s;
+		}
+		#transition:hover {
+			width: 200px;
+			height: 200px;	
+			transform: rotate(1114122deg);
+		}
+		@font-face {
+			font-family: forgetica;
+			src: url(SansForgetica.otf);
+		}
+		.newspaper1 {
+			column-count: 3;
+		}
+		.newspaper2 {
+			column-count: 3;
+			column-gap: 40px;
+		}
+		.newspaper3 {
+			column-count: 3;
+			column-gap: 40px;
+			column-rule: 11px double #aaffaa;
+		}
+		
+		@media only screen and (max-width: 1000px) {
+		.newspaper1 {
+			column-count: 2;
+		}
+		}
+		@media only screen and (max-width: 500px) {
+		.newspaper1 {
+			column-count: 1;
+		}
+		}
+		.flex-section {
+			margin-top: 1.5rem;
+			text-align: center;
+		}
+		.flex {
+			display: flex;
+			box-shadow:5px 5px 6px black;
+			height:500px;
+		}
+		.column {
+			padding: 16px;
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			border: 1px solid black;
+			transition: .3s ease-in-out;
+		}
+		.column:target {
+			flex: 2;
+			background-color:blue;
+			color:white;
+		}
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
+		.column:target#a1{
+		background-color:red;
+		}
+		.column:target#a2{
+		background-color:green;
+		}
+		.column:target#a3{
+		background-color:blue;
+		}
+		.column:target#a4{
+		background-color:gold;
+		}
 		</style>
 	</head>
 	<body style="background-color:lightgray">
@@ -127,29 +219,71 @@
 		<p id="borderimg3">border-image-slice: 10%;</p>
 		</article>
 		<hr>
-		<article>
-		<h2>8. </h2>
+		<article style="height:300px">
+		<h2>8. Animacja</h2>
+		<div id="animacja"></div>
 		</article>
 		<hr>
-		<article>
+		<article style="height:500px">
 		<h2>9. </h2>
+		<div id="transition" style="background:red"></div>
+		<div id="transition" style="background:yellow"></div>
+		<img src="kolo.png" id="transition">
 		</article>
 		<hr>
 		<article>
-		<h2>10. </h2>
+		<h2>10. Zewnętrzny font</h2>
+		<span style="font-family:forgetica;">To jest font Sans Forgetica. Został stworzony, aby ludzie mogli lepiej zapamiętywać tekst.<br>Ciekawostka: Określenie "czcionka" oznacza rodzaj nośnika pojedynczych znaków pisma drukarskiego, często mylone jako metonimia pojęcia font, który w rzeczywistości jest zestawu czcionek.</span>
 		</article>
 		<hr>
+		<article>
+		<h2>12.&13. Column-count, column-gap i column-rule</h2>
+		<h3>Column-count</h3>
+		<div class="newspaper1">
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+		</div>
+		<br>
+		<h3>Column-gap</h3>
+		<div class="newspaper2">
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+		</div>
+		<br>
+		<h3>Column-rule </h3>
+		<div class="newspaper3">
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+		</div>
+		</article>
+				<hr>
 		<article>
 		<h2>11. </h2>
+	    <section class="flex-section">
+        <div class="flex">
+            <div class="column" id="a1">
+                <a href="#a1">
+				  <img src="a1.png" style="width:100px;height:100px;"/> 
+				  <p>Dobre praktyki programowania zwiększają wydajność programisty i pomagają utrzymać porządek w kodzie. Wyprodukowany kod jest czytelny i optymalny.</p>
+                </a>
+            </div>
+			<div class="column" id="a2">
+                <a href="#a2">
+                  <img src="a2.png" style="width:100px;height:100px;"/>
+				  <p>Błędy zawsze się zdarzają. Przestrzeganie zasad czystego kodu pozwoli na zminimalizowanie liczby sytuacji wymagających żmudnego debugowania kodu i zaoszczędzić wiele godzin zmarnowanego na to czasu.</p>
+                </a>
+            </div>
+            <div class="column" id="a3">
+                <a href="#a3">
+                  <img src="a3.png" style="width:100px;height:100px;"/>
+			      <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. </p>
+                </a>
+            </div>
+			<div class="column" id="a4">
+                <a href="#a4">
+                   <img src="a4.png" style="width:100px;height:100px;"/>
+			       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id semper lectus. Vestibulum a pharetra ex. Proin lacinia nunc eu feugiat mattis. Nunc eget posuere lorem. Sed sagittis turpis ut viverra bibendum. Suspendisse potenti. Donec sit amet laoreet justo. Suspendisse quis fringilla nisi, sed ultricies neque. Aliquam a neque vitae augue ullamcorper sagittis. Vivamus elementum nunc a diam imperdiet, eu scelerisque libero congue. Fusce placerat sed dui a consequat.</p>
+                </a>
+            </div>
+        </div><br><br>
+    </section>   
 		</article>
-		<hr>
-		<article>
-		<h2>12. </h2>
-		</article>
-		<hr>
-		<article>
-		<h2>13. </h2>
-		</article>
-		
 	</body>
 </html>
