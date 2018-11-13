@@ -15,13 +15,13 @@
 		span{
 			font-size:30px;
 		}
-		#p1 {background-color:rgba(255,0,0,0.3);}
+		#p1 {background-color:rgba(255,0,0,0.3);} <!--Czerwony, zielony, niebieski, przezroczystosc-->
 		#p2 {background-color:rgba(0,255,0,0.3);}
 		#p3 {background-color:rgba(0,0,255,0.3);}
 		#p4 {background-color:rgba(192,192,192,0.3);}
 		#p5 {background-color:rgba(255,255,0,0.3);}
 		#p6 {background-color:rgba(255,0,255,0.3);}
-		#p11 {background-color:hsla(120,100%,50%,0.5);}
+		#p11 {background-color:hsla(120,100%,50%,0.5);} <!--kolor (0-359), saturacja, jasnosc, przezroczystosc-->
 		#p22 {background-color:hsla(120,100%,75%,0.3);}
 		#p33 {background-color:hsla(120,100%,25%,0.1);}
 		#p44 {background-color:hsla(120,60%,70%,0.3);}
@@ -74,6 +74,21 @@
 			animation-duration: 1.2s ;
 			animation-direction: reverse;
 			animation-iteration-count: infinite;
+		}
+		#tlo {
+			width: 1000px;
+		}
+		div.content {
+			padding: 10px 15px;
+			color: white;
+			font-size: 150%;
+		}
+		div.background {
+			background-image: url(ocean.jpg), url(foka.jpg);
+			background-position: bottom right, top right;
+			background-origin: border-box, border-box;
+			background-repeat: no-repeat, repeat;
+			background-size: auto, 50% auto;
 		}
 		@keyframes animacja {
 			0%   {background-color:red; left:0px; top:0px;}
@@ -195,7 +210,7 @@
 		<hr>
 		<article>
 		<h2>4. Box-shadow</h2>
-		<div style="border: 1px solid; padding: 10px; box-shadow: 5px 10px yellow;">
+		<div style="border: 1px solid; padding: 10px; box-shadow: 5px 10px 50px;"> <!--box-shadow: przesuniecie w prawo, przesuniecie w dol, rozmycie-->
 			<p>Div z box-shadow. Pierwsza wartość, to poziomy offset, 
 			a druga wartość, to pionowy offset. 
 			Kolor cienia zostanie odziedziczony po kolorze (jeżeli nie jest ustawiony).</p>
@@ -209,7 +224,15 @@
 		</article>
 		<hr>
 		<article>
-		<h2>6.</h2>
+		<h2>6. Umieszczanie obrazów w tle</h2>
+		<div class="background" id="tlo">
+		<div class="content">
+			<p>
+				Foka pospolita występuje w wodach klimatu umiarkowanego, subarktycznego i na wybrzeżach mórz strefy okołobiegunowej. Zamieszkuje północne wybrzeża Atlantyku i Pacyfiku. W Atlantyku obszar jej występowania dochodzi do granicy Portugalii i Meksyku. Na Pacyfiku spotykana jest wzdłuż wybrzeży Kanady i Chin. Można ją także spotkać w zachodnim Bałtyku po wyspy Uznam i Wolin, sporadycznie także bardziej na wschód. Bałtycka populacja liczy 600-700 sztuk. Niewielka kolonia występuje na południu Szwecji, większe znajdują się w Cieśninach Duńskich.Długość ciała dorosłych samców sięga 180 cm. Ubarwienie od jasnoszarego do ciemnobrązowego. Fokę pospolitą cechuje słaby węch, ale bardzo dobry słuch oraz doskonały wzrok. Foka unika wypływania na otwarte wody. Żyje zazwyczaj w wodach płytkich przy kamienistych wybrzeżach. Czasami spotyka się ją blisko ujść rzek oraz przy niewielkich piaszczystych wyspach. W wodzie foki są niezwykle zwinne i doskonale sobie radzą przy połowie ryb, które są ich podstawowym pożywieniem. Zjadają głównie śledzie i ryby dorszowate. Dietę uzupełniają bezkręgowcami.
+				Ciąża trwa 9-11 miesięcy. Samica rodzi jedno, czasami dwa młode. Poród następuje na lądzie, ale małe foki już po kilku godzinach wchodzą do wody i doskonale pływają. Matka karmi młode mlekiem przez około 5 tygodni[5]. Dożywają nawet do 46 roku życia[6].
+			</p>
+		</div>
+		</div>
 		</article>
 		<hr>
 		<article>
