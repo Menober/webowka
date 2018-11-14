@@ -29,6 +29,14 @@ function myFunction3(){
 	var text = prompt("Wprowadź jakiś tekst", "jakiś tekst");
 	window.alert("Wprowadziłeś tekst: "+text)
 }
+
+function doAll(){
+	document.getElementById("parseInt").value=parseInt(document.getElementById("parseInt").value,10);
+	document.getElementById("parseFloat").value=parseInt(document.getElementById("parseFloat").value)+0.0001;
+	document.getElementById("losowaLiczba").innerHTML = Math.random()*100;
+	document.getElementById("floor").value=Math.floor(document.getElementById("losowaLiczba").innerHTML);
+	}
+
   
 
 function displayDate() {

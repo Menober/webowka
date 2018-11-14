@@ -16,12 +16,19 @@
 	</head>
 	<body onload="onLoad()" style="background-color:lightgray">
 		<button type="button" onclick="myFunction()">document.writeln</button>
-		<button type="button" onclick="myFunction2()">document.getElementById()</button>
+		<button type="button" onclick="myFunction2()">document.getElementById()/innerHTML</button>
 		<span id="demo">xD</span>
 		<button type="button" onclick="myFunction3()">window.prompt/alert</button>
 		<button type="button" id="cztery">Try me</button>
 		<span id="piec"></span>
 		<br>
-		<button type="button" id="szesc">Naklikaj mnie jak jedną z tych twoich francuskich list</button>
+		<button type="button" id="szesc">Kliknij mnie jak jedną z tych twoich francuskich list</button> <!--W konsoli sprawdz-->
+		<br>
+		Parsowanie do int'a:<input type="text" id="parseInt"><br>
+		Parsowanie do float:<input type="text" id="parseFloat"><br>
+		Math.random:<span id="losowaLiczba">3.1415</span><br>
+		Math.floor: <input type="text" id="floor"><br>
+		<button type="button" onclick="doAll()">do all</button>
+	
 	</body>
 </html>
