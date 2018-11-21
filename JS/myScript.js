@@ -70,6 +70,20 @@ function leep(){
 	licznikUzytychFunkcji+=1;
 }
 
+function leep2() {
+	
+	let text="";
+	let n=document.getElementById("num2").value;
+	var i = 0;
+	
+	while (i < n) {
+		text = text+"A";
+		i+=1;
+	}
+	window.alert(text);
+	licznikUzytychFunkcji+=1;
+}
+
 function fibonacci(n) {
 	if (n === 0) return 0;
 	else if (n === 1 || n === 2) 
