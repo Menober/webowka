@@ -77,11 +77,53 @@ function leep2() {
 	var i = 0;
 	
 	while (i < n) {
-		text = text+"A";
+		text = text+"While ";
 		i+=1;
 	}
 	window.alert(text);
 	licznikUzytychFunkcji+=1;
+}
+
+function leep3() {
+	
+	let text="";
+	let n=document.getElementById("num3").value;
+	var i = 0;
+	
+	do {
+		text = text+"Do-While ";
+		i+=1;
+	}
+	while(i < n);
+	window.alert(text);
+	licznikUzytychFunkcji+=1;
+}
+
+function mySwitch() { 
+	let day="";
+	switch (new Date().getDay()) {
+		case 0:
+			day = "Niedziela";
+			break;
+		case 1:
+			day = "Poniedzialek";
+			break;
+		case 2:
+			day = "Wtorek";
+			break;
+		case 3:
+			day = "Sroda";
+			break;
+		case 4:
+			day = "Czwartek";
+			break;
+		case 5:
+			day = "Piatek";
+			break;
+		case 6:
+			day = "Sobota";
+	}
+	window.alert(day);
 }
 
 function fibonacci(n) {
