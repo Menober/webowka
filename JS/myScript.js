@@ -20,8 +20,6 @@ function tmp(){
 	} else if (event.button == 2) {
 		console.log("Right button");
 	}
-	
-	licznikUzytychFunkcji+=1;
 }
 
 
@@ -145,4 +143,31 @@ function fibonacci(n) {
 function ilefunkcji(){
 	licznikUzytychFunkcji+=1;
 	window.alert(licznikUzytychFunkcji);
+}
+
+
+function textarea(){
+	let text=document.getElementById("textarea").value;
+	window.alert("Bez spacji: "+letterCounter(text)+"\n"+"Ze spacjalmi:  "+text.length+"\n"+"Liczba słów: "+counter(text));
+	
+}
+
+function counter(str) {
+    var value = str;
+
+    var regex = /\s+/gi;
+    var wordCount = value.trim().replace(regex, ' ').split(' ').length;
+	return wordCount;
+}
+
+function letterCounter(str) {
+    var letters = 0;
+    var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var ar = alphabet.split("");
+    for (var i=0; i<str.length;i++) {
+        if (ar.indexOf(str[i]) > -1) {
+            letters = letters + 1;
+        }
+    }
+    return letters;
 }
