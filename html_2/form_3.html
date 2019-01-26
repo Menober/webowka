@@ -33,12 +33,12 @@
 		<form autocomplete="on">
         <label>
             <span>Imię</span>
-            <input type="text" name="firstname" pattern="[A-Za-z]+" autofocus>
+            <input type="text" name="firstname" pattern="[X]+[D]+" required>
             <span class="format-info">Tylko małe i duże litery</span>
         </label><br/>
         <label>
             <span>Nazwisko</span>
-            <input type="text" name="lastname" pattern="[A-Za-z\-]+" required>
+            <input type="text" name="lastname" pattern="[A-Z]+" required>
             <span class="format-info">Małe, duże litery i "-"</span>
         </label><br/>
         <label>
@@ -93,7 +93,8 @@
         <input class="button" type="submit" value="Submit"
                formaction="personal_info.html">
         <input class="reset button" type="reset" value="Wyczyść formularz"/>
-    </form>
+ 
+ </form>
 		<footer>
 			<code>
 			<br>╔────────────────────────────────────────────────────────────────────────────────╗

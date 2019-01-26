@@ -1,0 +1,97 @@
+String odebraneDane = ""; //Pusty ci¹g odebranych danych
+String left="";
+String up="";
+String right="";
+String down="";
+
+void setup() {
+  Serial.begin (9600);
+  pinMode(LED_BUILTIN,OUTPUT);
+  Serial.setTimeout(7);
+  pinMode(3,OUTPUT); 
+  pinMode(5,OUTPUT); 
+  pinMode(6,OUTPUT); 
+  pinMode(7,OUTPUT);
+  pinMode(8,OUTPUT);
+  pinMode(9,OUTPUT);
+}
+
+
+void moveForward(uint8_t _speed){
+      analogWrite(3,_speed);
+      analogWrite(5,_speed);
+      digitalWrite(6,LOW);
+      digitalWrite(7,HIGH);
+      digitalWrite(8,HIGH);
+      digitalWrite(9,LOW);
+}
+
+void moveBack(uint8_t _speed){
+      analogWrite(3,_speed);
+      analogWrite(5,_speed);
+      digitalWrite(6,HIGH);
+      digitalWrite(7,LOW);
+      digitalWrite(8,LOW);
+      digitalWrite(9,HIGH);
+ }
+
+void turnLeft(uint8_t _speed){
+      analogWrite(3,_speed);
+      analogWrite(5,_speed);
+      digitalWrite(6,HIGH);
+      digitalWrite(7,LOW);
+      digitalWrite(8,HIGH);
+      digitalWrite(9,LOW);
+}
+
+ void turnRight(uint8_t _speed){
+      analogWrite(3,_speed);
+      analogWrite(5,_speed);
+      digitalWrite(6,LOW);
+      digitalWrite(7,HIGH);
+      digitalWrite(8,LOW);
+      digitalWrite(9,HIGH);
+}
+
+ void stopMoving(){
+      analogWrite(3,0);
+      analogWrite(5,0);
+      digitalWrite(6,LOW);
+      digitalWrite(7,LOW);
+      digitalWrite(8,LOW);
+      digitalWrite(9,LOW);
+ }
+ 
+
+ 
+void loop() {  
+   if(Serial.available() > 0) { //Czy Arduino odebra³o dane
+   odebraneDane = Serial.readStringUntil('\n'); //Jeœli tak, to odczytaj je do znaku koñca linii i zapisz w zmiennej odebraneDane
+    left=odebraneDane.charAt(0);
+    up=odebraneDane.charAt(2);
+    right=odebraneDane.charAt(4);
+    down=odebraneDane.charAt(6);
+    
+     if(up.startsWith("1")){
+      moveForward(250);
+     }
+     else if(down.startsWith("1")){
+      moveBack(250);
+     }
+     else if(left.startsWith("1")){
+      turnLeft(250); 
+     }
+     else if(right.startsWith("1")){
+      turnRight(250);
+     }
+     else{
+      stopMoving();
+     }
+
+     
+     }
+    
+delay(1);
+ 
+}
+

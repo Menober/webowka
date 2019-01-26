@@ -7,22 +7,21 @@
 		<meta name="author" content="Krzysztof Miarczyński, Jakub Majchrzak">
 		<link rel="icon" type="image/x-icon" href="icon.ico">
 		<title>Memoland</title>
-		<link rel="stylesheet" href="styles.css">
-		<style type="text/css">
+		<style>
 		body {
 			font-size:20px;
 		}
 		span{
 			font-size:30px;
 		}
-		#p1 {background-color:rgba(255,0,0,0.3);} <!--Czerwony, zielony, niebieski, przezroczystosc-->
-		#p2 {background-color:rgba(0,255,0,0.3);}
+		#p1 {background-color:rgba(255,0,0,0.3);} 
+		#p2 {background-color:rgba(0,255,0,0.9);}
 		#p3 {background-color:rgba(0,0,255,0.3);}
 		#p4 {background-color:rgba(192,192,192,0.3);}
 		#p5 {background-color:rgba(255,255,0,0.3);}
 		#p6 {background-color:rgba(255,0,255,0.3);}
-		#p11 {background-color:hsla(120,100%,50%,0.5);} <!--kolor (0-359), saturacja, jasnosc, przezroczystosc-->
-		#p22 {background-color:hsla(120,100%,75%,0.3);}
+		#p11 {background-color:hsla(120,100%,50%,0.5);} 
+		#p22 {background-color:hsla(290,100%,50%,0.9);}
 		#p33 {background-color:hsla(120,100%,25%,0.1);}
 		#p44 {background-color:hsla(120,60%,70%,0.3);}
 		#p55 {background-color:hsla(290,100%,50%,0.9);}
@@ -42,8 +41,8 @@
 		}
 		#grad2 {
 			height: 1200px;
-			background-color: red; /* For browsers that do not support gradients */
-			background-image: repeating-radial-gradient(black , white 10%, black 10%); /* Standard syntax (must be last) */
+			background-color: red; 
+			background-image: repeating-radial-gradient(black, white 1%); 
 		}
 		#borderimg1 { 
 			text-align:center;
@@ -64,17 +63,6 @@
 			border-image: url(border.png) 30 round;
 			border-image-slice: 10%;
 		}	
-		div#animacja {
-			width: 100px;
-			height: 100px;
-			background-color: red;
-			position: relative;
-			animation-name: animacja;
-			animation-timing-function: ease-in-out ;
-			animation-duration: 1.2s ;
-			animation-direction: reverse;
-			animation-iteration-count: infinite;
-		}
 		#tlo {
 			width: 1000px;
 		}
@@ -90,6 +78,17 @@
 			background-repeat: no-repeat, repeat;
 			background-size: auto, 50% auto;
 		}
+		div#animacja {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: relative;
+			animation-name: animacja;
+			animation-timing-function: ease-in-out ;
+			animation-duration: 1.2s ;
+			animation-direction: reverse;
+			animation-iteration-count: infinite;
+		}
 		@keyframes animacja {
 			0%   {background-color:red; left:0px; top:0px;}
 			25%  {background-color:green; left:100px; top:0px;}
@@ -100,12 +99,12 @@
 		#transition {
 			width: 100px;
 			height: 100px;			
-			transition: width 2s, height 2s, transform 2110s;
+			transition: width 2s, height 2s, transform 1s;
 		}
 		#transition:hover {
 			width: 200px;
 			height: 200px;	
-			transform: rotate(1114122deg);
+			transform: rotate(90deg);
 		}
 		@font-face {
 			font-family: forgetica;
@@ -210,7 +209,7 @@
 		<hr>
 		<article>
 		<h2>4. Box-shadow</h2>
-		<div style="border: 1px solid; padding: 10px; box-shadow: 5px 10px 50px;"> <!--box-shadow: przesuniecie w prawo, przesuniecie w dol, rozmycie-->
+		<div style="border: 1px solid red; padding: 10px; box-shadow: 5px 10px 50px red;"> <!--box-shadow: przesuniecie w prawo, przesuniecie w dol, rozmycie-->
 			<p>Div z box-shadow. Pierwsza wartość, to poziomy offset, 
 			a druga wartość, to pionowy offset. 
 			Kolor cienia zostanie odziedziczony po kolorze (jeżeli nie jest ustawiony).</p>

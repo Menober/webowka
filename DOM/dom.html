@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Strona umożliwia pozytywne zaliczenie kursu programowania systemów webowych.">
+		<meta name="keywords" content="systemy, webowe, html, css, hemoglobina, taka, sytuacja">
+		<meta name="author" content="Krzysztof Miarczyński, Jakub Majchrzak">
+		<title>Memoland</title>
+		<link rel="icon" type="image/x-icon" href="icon.ico">
+		<link rel = "stylesheet" type = "text/css" href = "styles.css">
+		<script src = "dom.js"></script>
+	</head>
+	<body id="Bodys">
+		<h1>Kursy na V semestrze studiów</h1>
+		<h3>Kierunek: Informatyka</h3>
+		<p id = "kurs1" class = "highlighted">[kurs1] Programowanie Systemów Webowych</p>
+		<ul id = "list">
+			<li id = "html">[html] Hypertext Markup Language</li>
+			<li id = "css">[css] Cascading Style Sheets</li>
+			<li id = "js">[js] JavaScript</li>
+			<li id = "php">[php] PHP</li>
+		</ul>
+		<p id = "kurs2">[kurs2] Projektowanie Baz Danych</p>
+		<ul id = "list">
+			<li id = "bdr">[bdr] Relacyjne Bazy Danych</li>
+			<li id = "bdo">[bdo] Obiektowe Bazy Danych</li>
+		</ul>
+		<p id = "kurs3">[kurs3] Zarządzanie</p>
+		<ul id = "list">
+			<li id = "wdzpi">[wdzpi] Wprowadzenie do Zarządzania Projektami</li>
+			<li id = "pz">[pz] Podstawy Zarządzania</li>
+		</ul>
+		<div id = "nav" class = "nav">
+			<form onsubmit = "return false" action = "#" name = "Modyfikacja kursów">
+				<p><input type = "text" id = "gbi" value = "bigheading">
+					<input type = "button" value = "Zaznacz przedmiot" id = "byIdButton">
+				</p>
+				<p><input type = "text" id = "ins">
+					<input type = "button" value = "Wstaw nad" id = "insertButton">
+				</p>
+				<p><input type = "text" id = "append" >
+					<input type = "button" value = "Wstaw pod" id = "appendButton">
+				</p>
+				<p><input type = "text" id = "replace">
+					<input type = "button" value = "Zastąp przedmiot" id = "replaceButton">
+				</p>
+				<p><input type = "button" value = "Usuń przedmiot" id = "removeButton"></p>
+				<p><input type = "button" value = "Zaznacz grupę" id = "parentButton"></p>
+			</form>
+		</div>
+		<h4></h4>
+		<div class="row">
+			<div class="column">
+				<img src="beep.jpg" alt="Beep beep i'm a sheep" style="width:10%">
+			</div>
+		<div class="column">
+				<img src="muffin.png" alt="Muffin time" style="width:10%">
+			</div>
+			<div class="column">
+				<img src="cow.gif" alt="Meow meow i'm a ocw" style="width:10%">
+			</div>
+		</div>
+		<p><input type = "button" value = "Policz obrazki" id = "imgCount"> (Images)</p><br>
+		<div>
+			<p>Przydatne linki:</p>
+			<a href = "http://www.stackoverflow.com " name = "stack">StackOverflow</a><br>
+			<a href = "http://www.google.com" name = "google">Google</a><br>
+			<a href = "http://www.github.com" name = "git">GitHub</a>
+			<p>Który link Cię interesuje?</p>
+			<p id = "helpText"></p>
+			<p><input type = "text" id = "linkText" value = 1>
+				<input type = "button" id = "linkButton" value = "Zatwierdź"> (Links) (item) (focus/blur)
+			</p>
+			<span id="demo"></span>
+		</div>
+		<div>
+			<p>Formularze:</p>
+			<form name = "Formularz do zliczenia 1">
+				<p>Formularz tylko do zliczenia 1</p>
+			</form>
+			<form name = "Formularz do zliczenia 1">
+				<p>Formularz tylko do zliczenia 1</p>
+			</form>
+			<form name = "Formularz do zliczenia 2">
+				<p>Formularz tylko do zliczenia 2</p>
+			</form>
+			<p><input type = "button" id = "formsButton" value = "Nazwy formularzy"> (Forms)</p>
+			<p id = "helpText2"></p>
+		</div>
+		<div>
+			<p>Anchory:</p>
+			<p>Wybierz swój anchor (np. stack) <input type = "text" id = "anchorText"> 
+				<input type = "button" id = "anchorButton" value = "Zatwierdź"> (Anchors) (namedItem)
+			</p><br>
+			<span id="demo2">Miejsce na twój anchor</span>
+		</div>
+		<h4></h4>
+		<h3>Dynamiczne zmiany kolorów</h3>
+		<div class="row">
+			<div class="column">
+				<input type = "button" id = "colorButton" value = "Zmień kolor tła">
+			</div>
+			<div class="column">
+				<span id="colorText">Ten tekst będzie zmieniał kolor</span>
+			</div>
+			<div class="column">
+				<input type = "button" id = "colorTextButton" value = "Zmień kolor tekstu">
+			</div>
+			<div class="column">
+				<span id="fontText">Ten tekst będzie zmieniał cziconkę</span>
+			</div>
+			<form>
+				Arial<input type="radio" name="myRadios" onclick="handleClick(this);" value="0" />
+				Century Gothic<input type="radio" name="myRadios" onclick="handleClick(this);" value="1" />
+				Impact<input type="radio" name="myRadios" onclick="handleClick(this);" value="2" />
+			</form>
+		</div><br><br><br>
+		<h4></h4>
+		<h3>mousemove/mousedown/mouseover/mouseout</h3>
+		<div>
+			<img src = "paccl.png" id = "pac" alt = "Pacman">
+		</div><br><br><br>
+		<div>
+			<img src = "monk1.png" id = "monk" alt = "Monkey" onmousemove="changePhoto1()" onmousedown="changePhoto2()">
+		</div><br><br><br>
+		<h4></h4>
+		<form name="XD" id = "myForm" onsubmit="onsubmit5()" onreset="onreset5()">
+         <p><label class = "fixed" for = "name">Name:</label>
+            <input type = "text" id =  "name" 
+               placeholder = "Enter name"></p>
+         <p><label class = "fixed" for = "email">E-mail:</label>
+            <input type = "email" id = "email" 
+               placeholder = "Enter e-mail address"></p>
+         <p><label>Click here if you like this site 
+            <input type = "checkbox" id =  "like"></label></p>
+         <p><label for = "comments">Any comments?</p>
+         <textarea id =  "comments" 
+            placeholder = "Enter comments here"></textarea>
+         <p><input id = "submit" type = "submit"> 
+            <input id = "reset" type = "reset"></p>
+		
+      </form>
+	
+	<br>
+	 <input type="text" onkeydown="isPressed(event)" onkeyup="isPressed(event)"><br>
+		ALT: <span id="isAltPressed"></span><br>
+		CTRL: <span id="isCtrlPressed"></span><br>
+		SHIFT: <span id="isShiftPressed"></span><br>
+		Mouse Client X|Y: <span id="mouseClientCords"></span><br>
+		Mouse Screen X|Y: <span id="mouseScreenCords"></span><br>
+	</body>
+</html>

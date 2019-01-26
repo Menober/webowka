@@ -1,0 +1,16 @@
+h1, h3	{  text-align: center; font-family: tahona, geneva, sans-serif; }
+h4 {border-top: 3px dashed blue;}
+	a	{ text-decoration: none; }
+	a:hover	{ text-decoration: underline; }
+	.nav	{ width: 100%; border-top: 3px dashed blue; padding-top: 10px; text-align: right; }
+	.highlighted { background-color: grey; }
+	input { width: 150px; }
+	form > p { margin: 10px; }
+	.row { display: flex; }
+	.column { flex: 3.33%; padding: 5px; }
+	#canvas { width: 400px;
+          border: 1px solid #999999;
+          border-collapse: collapse }
+td      { width: 4px; height: 4px; margin: 0px; padding: 0px; }
+.blue   { background-color: blue; }
+.red    { background-color: red; }
