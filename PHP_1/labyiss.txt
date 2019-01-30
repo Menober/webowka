@@ -1,4 +1,0 @@
-zamodelowaæ uk³ad regulacji
-
-
-typowa postaæ algorytmu regulacji pid
